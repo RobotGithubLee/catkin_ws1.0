@@ -1,0 +1,12 @@
+<launch>
+
+  <node pkg="communication" type="socket" name="socket" output="screen" launch-prefix="gnome-terminal -e">
+  </node>
+
+  <include file="$(find lslidar_c16_decoder)/launch/lslidar_c16.launch"/>
+  <include file="$(find amcl_planner)/launch/amcl.launch"/>
+
+  <node pkg="planner_test" type="set_goals" name="set_goals" output="screen" launch-prefix="gnome-terminal -e">
+  </node>
+
+</launch>

@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="communication" type="socket" name="socket" output="screen" >
+  </node>
+
+  <node pkg="planner_test" type="odom_planner" name="odom_planner" output="screen" launch-prefix="gnome-terminal -e">
+  </node>
+
+  <node pkg="odom_patrol" type="odom_patrol" name="odom_patrol" output="screen" launch-prefix="gnome-terminal -e">
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz"  output="screen" launch-prefix="gnome-terminal -e">
+  </node>
+
+</launch>
